@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+source: https://www.youtube.com/watch?v=5d_mskVAxeU&t=10s
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <h2>Calculadora Simples</h2> <br>
+    Primeiro número <br>
+    <input id= "n1" type="number"> <br><br>
+    Segundo número <br>
+    <input id = "n2" type="number"> <br><br>
+
+    <button onclick="somar()">somar</button>
+    <button onclick="subtrair()">subtrair</button>
+    <button onclick="multiplicar()">multiplicar</button>
+    <button onclick="dividir()">dividir</button>
+    <br>
+    <br>
+    O Resultado é: <span> </span>
+
+    <script>
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var resultado = document.querySelector('span')
+
+        function somar(){
+            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+        }
+
+        function subtrair(){
+            resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+        }
+
+        function multiplicar(){
+            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+        }
+
+        function dividir(){
+            resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+        }
+
+
+    </script>
+</body>
+</html>
